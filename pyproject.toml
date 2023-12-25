@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "kafka-definitive-guide-study"
+version = "0.1.0"
+description = "Kafka Definitive Guide Study Examples"
+authors = ["Eunwoo Cho <jonnung@gmail.com>"]
+readme = "README.md"
+packages = [{include = "kafka_definitive_guide_study"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+confluent-kafka = {extras = ["avro"], version = "^2.3.0"}
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.1.9"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 119
